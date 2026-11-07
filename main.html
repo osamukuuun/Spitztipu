@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spitztipu | Мальтипу и Шпиц</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="preloader">
+    <div class="loader-icon">🐾</div>
+  </div>
+
+  <div class="custom-cursor" id="custom-cursor"></div>
+
+  <div id="custom-context-menu" class="context-menu">
+    <button class="context-menu-btn interactive-element" id="ctx-theme">Переключить тему</button>
+    <button class="context-menu-btn interactive-element" id="ctx-copy">Поделиться сайтом</button>
+    <button class="context-menu-btn interactive-element" id="ctx-top">Наверх</button>
+  </div>
+
+  <header class="navbar" id="main-header">
+    <a href="#" class="logo">Spitztipu.</a>
+    <nav class="nav-links">
+      <a href="#hero" class="nav-item">Главная</a>
+      <a href="#breeds" class="nav-item">Породы</a>
+      <a href="#sticky-story" class="nav-item">История</a>
+      <a href="#grooming-demo" class="nav-item">Груминг</a>
+      <a href="#gallery" class="nav-item">Галерея</a>
+      <button id="theme-toggle" class="btn-icon" aria-label="Переключить тему">🌙</button>
+    </nav>
+    <button class="btn btn-outline magnetic-btn" data-action="open-quiz">Подобрать щенка</button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <canvas id="hero-particles"></canvas>
+      <div class="hero-content">
+        <h1 class="split-text">Эстетика в каждой лапе</h1>
+        <p>Эксклюзивные мальтипу и шпицы для тех, кто ценит безупречность и преданность.</p>
+        <button class="btn btn-primary magnetic-btn" data-scroll-to="breeds">Исследовать породы</button>
+      </div>
+    </section>
+
+    <div class="marquee-section">
+      <div class="marquee-container" id="marquee">
+        <div class="marquee-content">
+          ✦ Эксклюзивные щенки ✦ Безупречный уход ✦ Идеальные компаньоны ✦ Эстетика в каждой лапе ✦ Эксклюзивные щенки ✦ Безупречный уход ✦ Идеальные компаньоны ✦ Эстетика в каждой лапе
+        </div>
+      </div>
+    </div>
+
+    <section id="breeds" class="breeds-section">
+      <h2 class="section-title split-text">Идеальные компаньоны</h2>
+      <div class="grid-container">
+        
+        <article class="premium-card tilt-card">
+          <div class="card-image-wrapper">
+            <img src="/img/maltipu.png" alt="Мальтипу" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800'">
+          </div>
+          <div class="card-body">
+            <h3>Мальтипу</h3>
+            <p>Гипоаллергенное облако нежности. Идеальный баланс интеллекта пуделя и ласки мальтийской болонки.</p>
+            <ul class="features-list">
+              <li>Вес: 2.5 - 4 кг</li>
+              <li>Не линяют</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="premium-card tilt-card">
+          <div class="card-image-wrapper">
+            <img src="/img/шпиц.jpg" alt="Шпиц" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1572059312061-4fa30dbbba91?auto=format&fit=crop&q=80&w=800'">
+          </div>
+          <div class="card-body">
+            <h3>Шпиц</h3>
+            <p>Компактная роскошь с львиным сердцем. Выразительный характер и густая, эффектная шерсть.</p>
+            <ul class="features-list">
+              <li>Вес: 1.9 - 3 кг</li>
+              <li>Активный темперамент</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Apple-style Sticky Scroll -->
+    <section id="sticky-story" class="sticky-section">
+      <div class="sticky-container">
+        <div class="sticky-image-side">
+          <img src="/img/мальтипу2.jpg" alt="Породы собак" id="sticky-img">
+        </div>
+        <div class="sticky-content-side">
+          <div class="sticky-step" data-img="/img/мальтипу2.jpg">
+            <h2>Интеллект и грация</h2>
+            <p>Мальтипу обладают невероятным умом, доставшимся от пуделей, и легко обучаются любым командам с первых дней дома.</p>
+          </div>
+          <div class="sticky-step" data-img="/img/шпиц2.jpg">
+            <h2>Львиное сердце</h2>
+            <p>Померанский шпиц сочетает в себе миниатюрную внешность и бесстрашный характер верного защитника.</p>
+          </div>
+          <div class="sticky-step" data-img="/img/мальтипу3.webp">
+            <h2>Идеальный баланс</h2>
+            <p>Обе породы созданы для жизни в современных квартирах и загородных домах, принося в атмосферу уют и тепло.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция с анимированным SVG-контуром следов -->
+    <section class="svg-draw-section">
+      <svg class="paw-svg" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="draw-path" d="M50 100 Q 150 20, 250 100 T 450 100 T 650 100 T 750 100" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+      </svg>
+      <h2 class="section-title split-text">Путь к вашему сердцу</h2>
+    </section>
+
+    <!-- Секция Spotlight фонарика -->
+    <section class="spotlight-section" id="spotlight-box">
+      <div class="spotlight-hidden-layer">
+        <img src="/img/шпиц и мальтипу 2.jfif" alt="Секрет">
+        <h2>Чистая любовь без границ</h2>
+      </div>
+      <div class="spotlight-visible-layer">
+        <h2>Наведите курсор, чтобы увидеть магов уюта</h2>
+        <p>(Интерактивный секретный слой)</p>
+      </div>
+    </section>
+
+    <section id="grooming-demo" class="grooming-section">
+      <h2 class="section-title split-text">Магия груминга</h2>
+      <p class="section-subtitle">Потяните ползунок, чтобы увидеть преображение.</p>
+      
+      <div class="before-after-container">
+        <img src="/img/мальтипу4.jfif" alt="После груминга" class="ba-image">
+        <img src="/img/шпиц4.jpg" alt="До груминга" class="ba-image ba-overlay" id="ba-overlay">
+        <input type="range" min="0" max="100" value="50" class="ba-slider" id="ba-slider">
+        <div class="ba-slider-button" id="ba-slider-btn"></div>
+      </div>
+    </section>
+
+    <section class="banner-separator">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <h2>Преданность, не требующая слов</h2>
+        <p>Пройди короткий тест и узнай, кто из этих малышей — твой соулмейт.</p>
+        <button class="btn btn-primary magnetic-btn interactive-element" data-action="open-quiz">Кто твой соулмейт?</button>
+      </div>
+    </section>
+
+    <section class="philosophy-section reveal">
+      <div class="philosophy-content">
+        <h2 class="section-title split-text">Разведение как искусство</h2>
+        <p>Мы не просто разводим собак. Мы создаем компаньонов, которые становятся частью вашей души. Каждый щенок растет в любви, социальной среде и абсолютной чистоте. Наша миссия — подарить вам здорового, психически стабильного и невероятно красивого друга.</p>
+        <div class="signature">С любовью, команда Spitztipu</div>
+      </div>
+    </section>
+
+    <section id="care" class="care-section reveal">
+      <h2 class="section-title split-text">Искусство заботы</h2>
+      <div class="grid-container care-grid">
+        <article class="care-card tilt-card">
+          <div class="care-icon">✨</div> 
+          <h3>Груминг</h3>
+          <p>Шпицы нуждаются в тщательном вычесывании густого подшерстка, а мальтипу — в регулярных стрижках.</p>
+        </article>
+        <article class="care-card tilt-card">
+          <div class="care-icon">🥩</div>
+          <h3>Питание</h3>
+          <p>Основа рациона — супер-премиум корма или сбалансированное натуральное меню с высоким содержанием белка.</p>
+        </article>
+        <article class="care-card tilt-card">
+          <div class="care-icon">🎾</div>
+          <h3>Активность</h3>
+          <p>Шпицы обожают активные игры, а мальтипу с радостью составят компанию в неспешном променаде.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="puppies" class="puppies-section reveal">
+      <h2 class="section-title split-text">Ждут свою семью</h2>
+      <div class="grid-container">
+        
+        <article class="puppy-card tilt-card">
+          <div class="puppy-image">
+            <span class="badge badge-maltipoo">Мальтипу F1</span>
+            <img src="/img/maltipu.png" alt="Мальтипу Оливер">
+          </div>
+          <div class="puppy-info">
+            <h3>Оливер</h3>
+            <p class="puppy-desc">Мальчик • 2.5 месяца • Окрас: Карамель</p>
+            <button class="btn btn-outline magnetic-btn interactive-element">Забронировать</button>
+          </div>
+        </article>
+
+        <article class="puppy-card tilt-card">
+          <div class="puppy-image">
+            <span class="badge badge-spitz">Шпиц</span>
+            <img src="/img/шпиц.jpg" alt="Шпиц Луна">
+          </div>
+          <div class="puppy-info">
+            <h3>Луна</h3>
+            <p class="puppy-desc">Девочка • 3 месяца • Окрас: Оранж-соболь</p>
+            <button class="btn btn-outline magnetic-btn interactive-element">Забронировать</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section reveal">
+      <h2 class="section-title split-text">Моменты радости</h2>
+      <div class="gallery-grid">
+        <img src="/img/maltipu.png" alt="Мальтипу" class="gallery-img tilt-card">
+        <img src="/img/шпиц.jpg" alt="Шпиц" class="gallery-img tilt-card">
+        <img src="/img/мальтипу2.jpg" alt="Мальтипу" class="gallery-img tilt-card">
+        <img src="/img/шпиц2.jpg" alt="Шпиц" class="gallery-img tilt-card">
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews-section reveal">
+      <h2 class="section-title split-text">Истории любви</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Наш мальтипу просто чудо! Невероятно умный мальчик, пеленку освоил за неделю. Спасибо за такое счастье!"</p>
+          <div class="review-author">— Анна и щенок Арчи</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Искали именно такого пушистого мишку. Шпиц растет здоровым, активным, ни разу не пожалели о выборе питомника."</p>
+          <div class="review-author">— Семья Коваленко</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section reveal">
+      <h2 class="section-title split-text">Частые вопросы</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Правда ли, что мальтипу не вызывают аллергию?</summary>
+          <div class="faq-answer">
+            <p>Мальтипу считаются гипоаллергенными, так как они не линяют и у них волосы, а не шерсть. Однако аллергия бывает и на слюну, поэтому перед покупкой стоит провести время с щенком.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Насколько шпицы громкие?</summary>
+          <div class="faq-answer">
+            <p>Шпицы обладают звонким голосом. При правильном воспитании и дрессировке с раннего возраста их эмоции можно легко контролировать.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Как они ладят с другими животными?</summary>
+          <div class="faq-answer">
+            <p>Обе породы социальны. Мальтипу легко находят общий язык с котами, а шпицы могут пытаться доминировать, поэтому им нужна ранняя социализация.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand" id="footer-logo" style="cursor: pointer;">Spitztipu.</div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>&copy; 2026 Spitztipu. Дизайн и разработка выполнены с любовью.</small>
+    </div>
+  </footer>
+
+  <dialog id="quiz-modal" class="modal">
+    <div class="modal-content quiz-content">
+      <button class="close-btn interactive-element" data-action="close-quiz">&times;</button>
+      <div class="quiz-progress-container">
+        <div class="quiz-progress-bar" id="quiz-progress"></div>
+      </div>
+      <div id="quiz-container" class="quiz-step-active">
+        <h2 id="quiz-question">Готовы узнать свою идеальную породу?</h2>
+        <div id="quiz-answers" class="quiz-answers">
+          <button class="btn btn-primary magnetic-btn interactive-element" id="start-quiz-btn">Начать тест</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="vn-overlay" class="vn-hidden">
+    <div class="vn-dialogue-box">
+      <div class="vn-character-name">Неизвестный Пёс</div>
+      <div class="vn-text" id="vn-text-content">...</div>
+      <div class="vn-hint">Кликните, чтобы продолжить</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
